@@ -1,7 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 function PickupDetails() {
+
+  const handleProceedClick = () => {
+    navigate('/cardlist');
+  };
+  
   return (
     <>
     <Navbar />
@@ -24,7 +30,7 @@ function PickupDetails() {
               placeholder="Enter volume"
             />
           </div>
-          <button className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-[100%]">
+          <button className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-[100%]" onClick={handleProceedClick} >
             Submit
           </button>
         </form>

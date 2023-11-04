@@ -13,6 +13,8 @@ import RetailHome from './pages/HomeRetail';
 import PickupDetails from './pages/PickupDetails';
 import PickupDetailsLogistics from './pages/PickupDetailsLogis';
 import LogisticsHome from './pages/HomeLogistics';
+import Card from './pages/cargoLists/card';
+import cardList from './pages/cardList';
 
 
 
@@ -32,9 +34,13 @@ const App = () => {
         <Route path='/pickup' element={<PickupDetails/>} />
         <Route path='/pickupLogistics' element={<PickupDetailsLogistics/>} />
         <Route path='/logistics' element={<LogisticsHome/>} />
+        <Route path='/cardlist' element={<cardList/>} />
+        
 
       </Routes>
     </Router>
+
+    
 
 
 
