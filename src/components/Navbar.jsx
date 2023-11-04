@@ -1,18 +1,17 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const navigate = useNavigate();
 
-    const navigate = useNavigate()
-
-    const logout = () =>{
-        localStorage.clear('user')
-        navigate('/login')
+    const logout = () => {
+        localStorage.clear('user');
+        navigate('/login');
     }
+
     return (
-        <div className='main lg:flex md:flex flex-wrap justify-between items-center 
-     px-4 bg-[#2a056f] py-4 shadow-md'>
+        <div className='main lg:flex md:flex flex-wrap justify-between items-center px-4 bg-[#2a056f] py-4 shadow-md'>
             <div className="left">
                 <div className="logo font-bold text-2xl text-white text-center">E-NoteBook</div>
             </div>
@@ -21,11 +20,20 @@ function Navbar() {
                     <Link to={'/'}>
                         <li className='cursor-pointer'>Home</li>
                     </Link>
-                    {user && <li onClick={logout} className='cursor-pointer'>Logout</li>}
+                    {user ? (
+                        <li onClick={logout} className='cursor-pointer'>Logout</li>
+                    ) : (
+                        <Link to={'/login'}>
+                            <li className='cursor-pointer'>Login</li>
+                        </Link>
+                    )}
+                    {user && (
+                        <li className='cursor-pointer'>{user.name}</li>
+                    )}
                 </ul>
             </div>
         </div>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
