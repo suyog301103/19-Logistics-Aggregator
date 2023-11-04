@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import Login from "./pages/registration/Login"
 import Signup from "./pages/registration/Signup"
 import { ProtectedRoute } from './protectRoute/ProtectedRoute';
+import RetailHome from './pages/HomeRetail';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' element={
         <ProtectedRoute>
           <Home/>
+          {/* <RetailHome /> */}
         </ProtectedRoute>
         } />
         <Route path='/login' element={<Login/>} />
