@@ -1,7 +1,10 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 function PickupDetailsLogistics() {
   return (
+    <>
+    <Navbar />
     <div className="flex justify-center items-center h-screen">
       <div className="card px-8 py-6 rounded-lg bg-gray-800 w-100">
         <h1 className="text-center font-bold text-3xl text-white">Pickup Details</h1>
@@ -21,12 +24,13 @@ function PickupDetailsLogistics() {
               placeholder="Enter volume"
             />
           </div>
-          <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold p-2 mt-3 rounded w-[100%]">
+          <button className="bg-yellow-500 hover:bg-blue-500 text-gray font-semibold p-2 mt-3 rounded w-[100%]">
             Submit
           </button>
         </form>
       </div>
     </div>
+    </>
   );
 }
 

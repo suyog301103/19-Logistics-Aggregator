@@ -11,26 +11,28 @@ function Navbar() {
     }
 
     return (
-        <div className='main lg:flex md:flex flex-wrap justify-between items-center px-4 bg-[#2a056f] py-4 shadow-md'>
-            <div className="left">
-                <div className="logo font-bold text-2xl text-white text-center">Send It!</div>
-            </div>
-            <div className="right">
-                <ul className='flex space-x-4 text-white justify-center items-center'>
-                    <Link to={'/'}>
-                        <li className='cursor-pointer'>Home</li>
-                    </Link>
-                    {user ? (
-                        <li onClick={logout} className='cursor-pointer'>Logout</li>
-                    ) : (
-                        <Link to={'/login'}>
-                            <li className='cursor-pointer'>Login</li>
+        <div className='bg-yellow-500 py-4 shadow-md'>
+            <div className="container mx-auto flex justify-between items-center px-4">
+                <div className="left">
+                    <div className="logo font-bold text-2xl text-grey text-center">Send It!</div>
+                </div>
+                <div className="right">
+                    <ul className='flex space-x-4 text-grey justify-center items-center'>
+                        <Link to={'/'}>
+                            <li className='cursor-pointer'>Home</li>
                         </Link>
-                    )}
-                    {user && (
-                        <li className='cursor-pointer'>{user.name}</li>
-                    )}
-                </ul>
+                        {user ? (
+                            <li onClick={logout} className='cursor-pointer'>Logout</li>
+                        ) : (
+                            <Link to={'/login'}>
+                                <li className='cursor-pointer'>Login</li>
+                            </Link>
+                        )}
+                        {user && (
+                            <li className='cursor-pointer'>{user.name}</li>
+                        )}
+                    </ul>
+                </div>
             </div>
         </div>
     );

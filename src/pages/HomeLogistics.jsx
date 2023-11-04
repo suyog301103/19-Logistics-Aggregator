@@ -85,7 +85,7 @@ function LogisticsHome() {
               />
             </div>
             <button
-              className="bg-blue-600 hover:bg-blue-500 text-white font-semibold p-2 mt-3 rounded w-full"
+              className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-full"
               onClick={handleProceedClick}
             >
               Proceed

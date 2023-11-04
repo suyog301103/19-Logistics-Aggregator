@@ -15,14 +15,14 @@ function RetailHome() {
     <>
       <Navbar />
       <div className="flex justify-center items-center h-screen">
-        <div className="card px-8 py-6 rounded-lg bg-gray-800 w-100">
-          <h1 className="text-center font-bold text-3xl text-white">Find Transport</h1>
+        <div className="bg-gray-800 px-10 py-10 rounded-xl">
+          <h1 className="text-center text-white text-3xl font-bold mb-4">Find Transport</h1>
           <form className="my-6">
             <div className="mb-2">
               <label className="block text-white">From</label>
               <input
                 list="fromOptions"
-                className="p-2 rounded w-[100%] focus:outline-blue-600"
+                className="bg-gray-600 p-2 rounded w-full focus:outline-none text-white placeholder:text-gray-200"
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
               />
@@ -38,7 +38,7 @@ function RetailHome() {
               <label className="block text-white">To</label>
               <input
                 list="toOptions"
-                className="p-2 rounded w-[100%] focus:outline-blue-600"
+                className="bg-gray-600 p-2 rounded w-full focus:outline-none text-white placeholder:text-gray-200"
                 value={to}
                 onChange={(e) => setTo(e.target.value)}
               />
@@ -50,7 +50,7 @@ function RetailHome() {
               </datalist>
             </div>
             <button
-              className="bg-blue-600 hover-bg-blue-500 text-white font-semibold p-2 mt-3 rounded w-[100%]"
+              className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-full"
               onClick={handleProceedClick}
             >
               Proceed
