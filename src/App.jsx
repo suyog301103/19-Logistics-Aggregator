@@ -10,6 +10,7 @@ import Login from "./pages/registration/Login"
 import Signup from "./pages/registration/Signup"
 import { ProtectedRoute } from './protectRoute/ProtectedRoute';
 import RetailHome from './pages/HomeRetail';
+import PickupDetails from './pages/PIckupDetails';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         } />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/pickup' element={<PickupDetails/>} />
 
       </Routes>
     </Router>
