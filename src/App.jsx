@@ -11,23 +11,37 @@ import Signup from "./pages/registration/Signup"
 import { ProtectedRoute } from './protectRoute/ProtectedRoute';
 import RetailHome from './pages/HomeRetail';
 import PickupDetails from './pages/PIckupDetails';
+import LogisticsHome from './pages/HomeLogistics';
+
+
 
 const App = () => {
+
+
   return (
     <Router>
       <Routes>
         <Route path='/' element={
         <ProtectedRoute>
           <RetailHome />
+          <LogisticsHome />
         </ProtectedRoute>
         } />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/pickup' element={<PickupDetails/>} />
+        <Route path='/logistics' element={<LogisticsHome/>} />
 
       </Routes>
     </Router>
+
+
+
   )
+  
 }
 
 export default App
+
+
+
