@@ -57,7 +57,10 @@ function Signup() {
                     <h2 className='text-white'>Don't have an account <Link className=' text-red-500 font-bold' to={'/login'}>Login</Link></h2>
                 </div>
             </div>
+            
         </div>
+        
+        
     )
 }
 
