@@ -8,10 +8,10 @@ function LogisticsHome() {
   const [to, setTo] = useState('Bengaluru');
   const [vehicleType, setVehicleType] = useState('Car');
   const [vehicleVolume, setVehicleVolume] = useState('');
+  const [midPoints, setMidPoints] = useState('');
 
   const handleProceedClick = () => {
-    // You can access the selected values via the state variables (from, to, vehicleType, vehicleVolume)
-    navigate('/pickup');
+    navigate('/pickupLogistics');
   };
 
   return (
@@ -23,49 +23,57 @@ function LogisticsHome() {
           <form className="my-6">
             <div className="mb-2">
               <label className="block text-white">From</label>
-              <select
+              <input
+                list="fromOptions"
                 className="p-2 rounded w-full focus:outline-blue-600"
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
-              >
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysore">Mysore</option>
-                <option value="Mandya">Mandya</option>
-                <option value="Hubbli">Hubbli</option>
-              </select>
+              />
+              <datalist id="fromOptions">
+                <option value="Bengaluru" />
+                <option value="Mysore" />
+                <option value="Mandya" />
+                <option value="Hubbli" />
+              </datalist>
             </div>
             <div className="mb-2">
               <label className="block text-white">To</label>
-              <select
+              <input
+                list="toOptions"
                 className="p-2 rounded w-full focus:outline-blue-600"
                 value={to}
                 onChange={(e) => setTo(e.target.value)}
-              >
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysore">Mysore</option>
-                <option value="Mandya">Mandya</option>
-                <option value="Hubbli">Hubbli</option>
-              </select>
+              />
+              <datalist id="toOptions">
+                <option value="Bengaluru" />
+                <option value="Mysore" />
+                <option value="Mandya" />
+                <option value="Hubbli" />
+              </datalist>
             </div>
             <div className="mb-2">
-            <label className="block text-white">Mid points</label>
+              <label className="block text-white">Mid points</label>
               <input
                 type="text"
                 className="p-2 rounded w-full focus:outline-blue-600"
-                value={vehicleVolume}
-                onChange={(e) => setVehicleVolume(e.target.value)}
+                value={midPoints}
+                onChange={(e) => setMidPoints(e.target.value)}
               />
+            </div>
+            <div className="mb-2">
               <label className="block text-white">Type of Vehicle</label>
-              <select
+              <input
+                list="vehicleTypeOptions"
                 className="p-2 rounded w-full focus:outline-blue-600"
                 value={vehicleType}
                 onChange={(e) => setVehicleType(e.target.value)}
-              >
-                <option value="Car">Car</option>
-                <option value="Truck">Truck</option>
-                <option value="Motorcycle">Motorcycle</option>
-                <option value="Van">Van</option>
-              </select>
+              />
+              <datalist id="vehicleTypeOptions">
+                <option value="Car" />
+                <option value="Truck" />
+                <option value="Motorcycle" />
+                <option value="Van" />
+              </datalist>
             </div>
             <div className="mb-2">
               <label className="block text-white">Volume of Vehicle</label>

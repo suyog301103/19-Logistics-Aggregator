@@ -10,7 +10,8 @@ import Login from "./pages/registration/Login"
 import Signup from "./pages/registration/Signup"
 import { ProtectedRoute } from './protectRoute/ProtectedRoute';
 import RetailHome from './pages/HomeRetail';
-import PickupDetails from './pages/PIckupDetails';
+import PickupDetails from './pages/PickupDetails';
+import PickupDetailsLogistics from './pages/PickupDetailsLogis';
 import LogisticsHome from './pages/HomeLogistics';
 
 
@@ -24,12 +25,12 @@ const App = () => {
         <Route path='/' element={
         <ProtectedRoute>
           <RetailHome />
-          <LogisticsHome />
         </ProtectedRoute>
         } />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/pickup' element={<PickupDetails/>} />
+        <Route path='/pickupLogistics' element={<PickupDetailsLogistics/>} />
         <Route path='/logistics' element={<LogisticsHome/>} />
 
       </Routes>

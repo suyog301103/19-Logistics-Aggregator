@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 function RetailHome() {
   const navigate = useNavigate();
+  const [from, setFrom] = useState('Bengaluru');
+  const [to, setTo] = useState('Bengaluru');
 
   const handleProceedClick = () => {
     navigate('/pickup');
@@ -18,25 +20,34 @@ function RetailHome() {
           <form className="my-6">
             <div className="mb-2">
               <label className="block text-white">From</label>
-              <select
+              <input
+                list="fromOptions"
                 className="p-2 rounded w-[100%] focus:outline-blue-600"
-              >
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Mysore">Mysore</option>
-                <option value="Mandya">Mandya</option>
-                <option value="Hubbli">Hubbli</option>
-              </select>
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+              />
+              <datalist id="fromOptions">
+                <option value="Bengaluru" />
+                <option value="Bengal" />
+                <option value="Mysore" />
+                <option value="Mandya" />
+                <option value="Hubbli" />
+              </datalist>
             </div>
             <div className="mb-2">
               <label className="block text-white">To</label>
-              <select
+              <input
+                list="toOptions"
                 className="p-2 rounded w-[100%] focus:outline-blue-600"
-              >
-                <option value="volvo">Bengaluru</option>
-                <option value="saab">Mysore</option>
-                <option value="mercedes">Mandya</option>
-                <option value="audi">Hubbli</option>
-              </select>
+                value={to}
+                onChange={(e) => setTo(e.target.value)}
+              />
+              <datalist id="toOptions">
+                <option value="Bengaluru" />
+                <option value="Mysore" />
+                <option value="Mandya" />
+                <option value="Hubbli" />
+              </datalist>
             </div>
             <button
               className="bg-blue-600 hover-bg-blue-500 text-white font-semibold p-2 mt-3 rounded w-[100%]"
