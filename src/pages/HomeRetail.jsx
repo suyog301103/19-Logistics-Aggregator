@@ -137,6 +137,7 @@ const RetailHome = () => {
               <option value="Mandya">Mandya</option>
               <option value="Hubbli">Hubbli</option>
             </select>
+
           </div>
           <div className="mb-2">
             <label className="block text-white">To</label>
@@ -149,6 +150,7 @@ const RetailHome = () => {
               <option value="Mandya">Mandya</option>
               <option value="Hubbli">Hubbli</option>
             </select>
+            
           </div>
           <div className="mb-2">
             <label className="block text-white">Pickup Date</label>
