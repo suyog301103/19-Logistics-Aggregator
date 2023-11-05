@@ -11,7 +11,8 @@ function LogisticsHome() {
   const [midPoints, setMidPoints] = useState('');
 
   const handleProceedClick = () => {
-    navigate('/pickupLogistics');
+    // navigate('/pickupLogistics'); // changes for suyog
+    navigate('/gubald');
   };
 
   return (
@@ -84,6 +85,23 @@ function LogisticsHome() {
                 onChange={(e) => setVehicleVolume(e.target.value)}
               />
             </div>
+            {/* <h1 className="text-center font-bold text-3xl text-white">Pickup Details</h1> */}
+        {/* <form className="my-6"> */}
+          <div className="mb-2">
+            <label className="block text-white">Pickup Date</label>
+            <input
+              className="p-2 rounded w-[100%] focus:outline-blue-600"
+              type="date"
+            />
+          </div>
+          <div className="mb-2">
+            <label className="block text-white">Volume of Inventory</label>
+            <input
+              className="p-2 rounded w-[100%] focus:outline-blue-600"
+              type="text"
+              placeholder="Enter volume"
+            />
+          </div>
             <button
               className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-full"
               onClick={handleProceedClick}
