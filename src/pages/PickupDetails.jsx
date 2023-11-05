@@ -3,9 +3,10 @@ import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 function PickupDetails() {
+  const navigate = useNavigate();
 
   const handleProceedClick = () => {
-    navigate('/cardlist');
+        navigate('/cardlist');
   };
   
   return (

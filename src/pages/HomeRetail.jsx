@@ -8,7 +8,8 @@ function RetailHome() {
   const [to, setTo] = useState('Bengaluru');
 
   const handleProceedClick = () => {
-    navigate('/pickup');
+    // navigate('/pickup');   //changed for suyog
+    navigate('/'); 
   };
 
   return (
@@ -49,6 +50,27 @@ function RetailHome() {
                 <option value="Hubbli" />
               </datalist>
             </div>
+
+
+            {/* <h1 className="text-center font-bold text-3xl text-white">Pickup Details</h1> */}
+
+          <div className="mb-2">
+            <label className="block text-white">Pickup Date</label>
+            <input
+              className="p-2 rounded w-[100%] focus:outline-blue-600"
+              type="date"
+            />
+          </div>
+          <div className="mb-2">
+            <label className="block text-white">Volume of Inventory</label>
+            <input
+              className="p-2 rounded w-[100%] focus:outline-blue-600"
+              type="text"
+              placeholder="Enter volume"
+            />
+          </div>
+
+
             <button
               className="bg-yellow-500 hover:bg-blue-500 text-black font-semibold p-2 mt-3 rounded w-full"
               onClick={handleProceedClick}
